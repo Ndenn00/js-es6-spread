@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <div class=people>
+    <p>Jon</p>
+    <p>James</p>
+    <p>Wendy</p>
+  </div>
+  <script>
+    // some usage 
+    const people = [...document.querySelectorAll('.people p')]; 
+
+    const names = people.map((person) => person.textContent); 
+    console.log(names); 
+
+    // objects, spread in properties of objects 
+    const deepsish = {
+      pizzaName: 'DeepDish',
+      size: 'Medium',
+      ingredients: ['sauce', 'garlic', 'flour'] 
+    }; 
+
+    const shoppingList = ['milk', 'honey', ...deepsish.ingredients];
+
+    
+  </script>
+</body>
+</html>

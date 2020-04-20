@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <script>
+    const inventors = ['Einstein', 'Newton', 'Galileo'];
+    const newInventors = ['Musk', 'Jobs']; 
+    
+    // remmeber, you can't push.apply an array, 
+    // and you can't just push into the array 
+    // so .. 
+
+    const newGroup = inventors.push(...newInventors); 
+
+    const names = ['Wes', 'Bos'];
+
+    function sayHi(first, last){ 
+      alert(`Hey there ${first} ${last}`); 
+    };
+
+    sayHi(...names); 
+    // both params will be spread on in, not super dynamic,
+    // but another use case
+  </script>
+</body>
+</html>

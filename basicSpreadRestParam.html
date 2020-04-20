@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <script>
+    // Rest takes multiple things and packs into a single array
+
+    // use them in a function, and in structuring situations
+
+    // 1 - use case, an unknown number of amounts 
+    function convertCurrency(rate, ...amounts){
+      console.log(rate, amounts); 
+      return amounts.map(amount => amount * rate); 
+    };
+
+    convertCurrency(1.54, 1, 55, 478, .78); 
+
+    // destructuring
+    // consider it csv data in, index 2 onwards are the same type, like running distance 
+    const runner = ['Nigel', 123, 4,5,6,44,5]; 
+    const [name, id, ...runs] = runner; 
+
+    // the runs will be bundled into a single array
+    // like
+
+    const team = ['andrea', 'john', 'sally', 'barb', 'bruce'];
+    const [captain, viceCaptain, ...players] = team; 
+    
+
+  </script>
+  
+</body>
+</html>
